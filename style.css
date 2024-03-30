@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #141414;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(120deg, #1234, #9876, #1928); */
+  background: #141414;
+  padding: 1rem;
+}
+.todo-app {
+  width: 100%;
+  max-width: 54rem;
+  background: linear-gradient(180deg, #489, #735);
+  margin: 10rem auto;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+.todo-app h2 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  justify-content: center;
+}
+
+.todo-app h2 img {
+  width: 4rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 3rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.task input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 1rem;
+}
+.task button {
+  border: none;
+  outline: none;
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  background: #fc2879;
+  color: #fff;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+}
+ul li::before{
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 1rem;
+  left: .5rem;
+}
+ul li.checked{
+  text-decoration: line-through;
+  
+}
+ul li.checked::before{
+  background-image: url(images/check.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+ul li span:hover{
+  cursor: pointer;
+  background: #fc2879;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 360px) {
+  html{
+    font-size: 7px;
+  }
+
+}
+@media screen and (max-width: 300px) {
+  html{
+    font-size: 5px;
+  }
+
+}
